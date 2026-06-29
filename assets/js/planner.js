@@ -126,7 +126,7 @@ function initPlanner() {
                     <span style="${isOverdue ? 'color: var(--danger); font-weight: 600;' : ''}">Due: ${dueFormatted}${isOverdue ? ' (Overdue)' : ''}</span>
                 </div>
             </div>
-            <button class="task-delete" onclick="deleteTask('${task.id}')">Delete</button>
+            <button class="task-delete" onclick="deleteTask('${task.id}')"><i class="fas fa-trash"></i></button>
         `;
 
         return div;

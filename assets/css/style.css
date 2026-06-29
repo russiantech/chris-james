@@ -1239,6 +1239,10 @@ img {
     padding: 24px;
     text-align: center;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .stat-card:hover {
@@ -1902,6 +1906,114 @@ img {
 
     .planner-stats {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================
+   PLANNER — MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+/* Flat, sleeker badge style for category & priority */
+.task-category,
+.task-priority {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1.6;
+}
+
+/* Delete button — contained, icon-ready */
+.task-delete {
+    flex-shrink: 0;
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+@media (max-width: 600px) {
+    /* Stack task item: top row = checkbox + content, bottom = actions */
+    .task-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 14px;
+    }
+
+    .task-checkbox {
+        margin-top: 2px;
+    }
+
+    .task-content {
+        flex: 1 1 0;
+        min-width: 0; /* prevent text overflow */
+    }
+
+    .task-title {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Meta row: badges wrap naturally, never overflow */
+    .task-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        margin-top: 6px;
+    }
+
+    /* Badges: flatter, more compact on mobile */
+    .task-category,
+    .task-priority {
+        font-size: 0.68rem;
+        padding: 2px 7px;
+        border-radius: 3px;
+        letter-spacing: 0.3px;
+    }
+
+    /* Delete button pushed to right of the same row as checkbox+content */
+    .task-delete {
+        align-self: flex-start;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        margin-left: auto;
+        font-size: 0.75rem;
+    }
+
+    /* Filter buttons: smaller + denser on mobile */
+    .planner-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    /* Input card padding tighter */
+    .planner-input-card {
+        padding: 20px 16px;
+    }
+
+    /* Task list container padding tighter */
+    .task-list-container {
+        padding: 16px 12px;
     }
 }
 
