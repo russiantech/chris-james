@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Christopher James - education, career aspirations, technical skills, and hobbies.">
+    <title>About &bull; Christopher James</title>
+    <link rel="icon" href="assets/images/me/edidem.webp">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .welcome-icon, .aspiration-icon, .hobby-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(96,165,250,0.15), rgba(96,165,250,0.05));
+            border: 1px solid rgba(96,165,250,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: #60a5fa; margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .aspiration-card:hover .aspiration-icon, .hobby-card:hover .hobby-icon {
+            background: linear-gradient(135deg, rgba(96,165,250,0.25), rgba(96,165,250,0.1));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(96,165,250,0.15);
+        }
+        .cert-badge, .cert-logo {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.35rem 0.85rem; border-radius: 6px;
+            background: rgba(96,165,250,0.12); color: #60a5fa;
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em;
+            text-transform: uppercase; margin-bottom: 1rem;
+        }
+        .cert-badge i, .cert-logo i { font-size: 0.875rem; }
+        .cert-status {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            color: #10b981; font-weight: 600; font-size: 0.875rem;
+        }
+        .cert-status i { font-size: 0.875rem; }
+        .section-tag {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.875rem; font-weight: 500; color: #60a5fa;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+        .section-tag i { font-size: 0.75rem; }
+        .cert-date i { margin-right: 0.35rem; }
+        .footer-links a {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover { color: #60a5fa; }
+        .footer-links a i { font-size: 0.875rem; width: 1.25rem; text-align: center; }
+        .page-tag {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.875rem; font-weight: 500; color: #60a5fa;
+            text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .page-tag i { font-size: 0.75rem; }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="nav-avatar">
+                <span class="nav-logo">Chris <span style="color: #60a5fa;">James</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About Me</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="academic.html" class="nav-link">School Planner</a></li>
+                <li><a href="contact.html" class="nav-link">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <span class="page-tag"><i class="fas fa-user"></i> About Me</span>
+                <h1 class="page-title">Empower people • Power businesses</h1>
+                <p class="page-desc">Elite fullstack python software engineer, with special interest in artificial intelleigence, data and hacking.</p>
+            </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <!-- <img src="data:image/png;base64,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" alt="Christopher James" class="about-img"> -->
+                         <img class="about-img" src="assets/images/me/edidem.png" alt="Christopher James">
+                        <div class="about-image-accent"></div>
+                    </div>
+                    <div class="about-content">
+                        <h2>Christopher James</h2>
+                        <p class="about-role">Fullstack Software Engineer • AI & Data Integration • Hacking Enthusiast</p>
+                        <p class="about-text">
+                            I have 6+ years of production experience building scalable web platforms, SaaS products, and AI-integrated systems. Currently pursuing a BSc in Computer Science at Miva Open University, 
+                            I operate at the intersection of software engineering, artificial intelligence, and cybersecurity.
+                        </p>
+                        <p class="about-text">
+                            My philosophy is simple: <strong>security is not an afterthought—it is the foundation.</strong> Every system I architect 
+                            is designed with defense-in-depth principles, from IAM policy enforcement and VPC segmentation to continuous 
+                            penetration testing and secure CI/CD pipelines. I believe that to build truly intelligent software, one must first 
+                            understand how to protect it.
+                        </p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Graceland Estate, Ajah, Lagos, Nigeria</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">chrisjsmez@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone</span>
+                                <span class="info-value">(234) 702-656-1327</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">University</span>
+                                <span class="info-value">Miva Open University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
+                    <h2 class="section-title">Academic & Professional Training</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Present — 2026</span>
+                            <h3>BSc Computer Science</h3>
+                            <p class="timeline-org">Miva Open University, Nigeria</p>
+                            <p>Currently in 100L, 2nd Semester. Focusing on algorithms, data structures, web technologies, and systems security. 
+                            Active participant in the Micro-Credential Program, earning industry-recognized certifications alongside academic coursework.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 — 2024</span>
+                            <h3>Professional Certification, Fullstack Development</h3>
+                            <p class="timeline-org">ALX Software Engineering Program, Nairobi (Remote)</p>
+                            <p>Intensive 12-month program covering software engineering fundamentals, system design, DevOps, and collaborative development. 
+                            Built production-grade applications using Python, JavaScript, and modern frameworks.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2019</span>
+                            <h3>Certification, Software Programming</h3>
+                            <p class="timeline-org">Dunis Technologies, Lagos</p>
+                            <p>Foundational training in Python and JavaScript, sparking the transition from digital marketing to software engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Aspirations -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-eye"></i> Vision</span>
+                    <h2 class="section-title">Career Aspirations</h2>
+                </div>
+                <div class="aspirations-grid">
+                    <div class="aspiration-card">
+                        <div class="aspiration-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI Engineering</h3>
+                        <p>Build and deploy custom machine learning models that solve real-world problems—from predictive analytics 
+                        for African SMEs to computer vision systems for agricultural optimization. I aim to move beyond API integration 
+                        to training and fine-tuning models from scratch.</p>
+                    </div>
+                    <div class="aspiration-card">
+                        <div class="aspiration-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Cybersecurity & Ethical Hacking</h3>
+                        <p>Attain professional certifications in offensive security (CEH, OSCP) and build secure-by-design systems. 
+                        My goal is to lead red-team operations and secure architecture reviews for fintech and government platforms across West Africa.</p>
+                    </div>
+                    <div class="aspiration-card">
+                        <div class="aspiration-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3>Systems Architecture</h3>
+                        <p>Design distributed systems that scale from thousands to millions of users. Master cloud-native patterns, 
+                        event-driven architecture, and data mesh strategies to power the next generation of African tech infrastructure.</p>
+                    </div>
+                    <div class="aspiration-card">
+                        <div class="aspiration-icon"><i class="fas fa-globe-africa"></i></div>
+                        <h3>Tech for Social Impact</h3>
+                        <p>Leverage engineering skills to build platforms that improve education access, financial inclusion, and 
+                        healthcare delivery in underserved communities. Technology should be a force multiplier for human potential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-layer-group"></i> Stack</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">jQuery</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">AI/LLM Integration</span>
+                            <span class="skill-tag">Payment Gateways</span>
+                            <span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">Cloud Deployment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Section -->
+        <section class="section" id="credentials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-certificate"></i> MIVA-COS 111</span>
+                    <h2 class="section-title">Micro-Credentials & Certifications</h2>
+                    <p class="section-desc">Industry-recognized certifications earned through the Miva Open University Micro-Credential Program</p>
+                </div>
+                <div class="certs-detail">
+                    <div class="cert-detail-card">
+                        <div class="cert-header">
+                            <div class="cert-logo"><i class="fab fa-aws"></i> AWS</div>
+                            <div class="cert-meta">
+                                <h3>AWS Technical Essentials</h3>
+                                <span class="cert-provider">AWS Training & Certification</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p>Comprehensive introduction to AWS core services including EC2 compute, S3 object storage, VPC networking, 
+                            and IAM identity management. This certification established my cloud infrastructure literacy—the substrate 
+                            upon which all modern AI and security tooling is deployed.</p>
+                            <div class="cert-skills">
+                                <span>EC2</span>
+                                <span>S3</span>
+                                <span>VPC</span>
+                                <span>IAM</span>
+                                <span>Cloud Security</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span class="cert-date"><i class="far fa-calendar-alt"></i> Completed: June 26, 2026</span>
+                            <span class="cert-status"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                    </div>
+                    <div class="cert-detail-card">
+                        <div class="cert-header">
+                            <div class="cert-logo"><i class="fab fa-aws"></i> AWS</div>
+                            <div class="cert-meta">
+                                <h3>AWS ML Engineer Associate Curriculum Overview</h3>
+                                <span class="cert-provider">AWS Training & Certification</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p>Deep dive into the end-to-end machine learning lifecycle. Covered supervised, unsupervised, and reinforcement 
+                            learning paradigms; feature engineering; model training; and deployment via Amazon SageMaker. Emphasized 
+                            translating business problems into quantified ML tasks with explicit success criteria.</p>
+                            <div class="cert-skills">
+                                <span>SageMaker</span>
+                                <span>Supervised Learning</span>
+                                <span>Unsupervised Learning</span>
+                                <span>Reinforcement Learning</span>
+                                <span>Feature Engineering</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span class="cert-date"><i class="far fa-calendar-alt"></i> Completed: June 28, 2026</span>
+                            <span class="cert-status"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                    </div>
+                    <div class="cert-detail-card">
+                        <div class="cert-header">
+                            <div class="cert-logo"><i class="fab fa-aws"></i> AWS</div>
+                            <div class="cert-meta">
+                                <h3>Fundamentals of Generative AI</h3>
+                                <span class="cert-provider">AWS Training & Certification</span>
+                            </div>
+                        </div>
+                        <div class="cert-body">
+                            <p>Architectural vocabulary and practical constraints of foundation models. Studied prompt engineering, 
+                            retrieval-augmented generation (RAG), model fine-tuning, and responsible AI deployment—including bias 
+                            mitigation, cost management, and latency optimization.</p>
+                            <div class="cert-skills">
+                                <span>Prompt Engineering</span>
+                                <span>RAG</span>
+                                <span>Fine-Tuning</span>
+                                <span>Responsible AI</span>
+                                <span>Foundation Models</span>
+                            </div>
+                        </div>
+                        <div class="cert-footer">
+                            <span class="cert-date"><i class="far fa-calendar-alt"></i> Completed: June 28, 2026</span>
+                            <span class="cert-status"><i class="fas fa-check-circle"></i> Verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-heart"></i> Beyond Code</span>
+                    <h2 class="section-title">Hobbies & Interests</h2>
+                </div>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <div class="hobby-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Fitness & Discipline</h3>
+                        <p>Physical training mirrors software engineering: consistency, progressive overload, and recovery. 
+                        I apply the same discipline to my codebase and my deadlifts.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Continuous Learning</h3>
+                        <p>From research papers on transformer architectures to cybersecurity write-ups on HackerOne, 
+                        I spend my free time absorbing knowledge that compounds into better engineering decisions.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon"><i class="fas fa-flag"></i></div>
+                        <h3>Capture The Flag (CTF)</h3>
+                        <p>Participating in CTF competitions and bug bounty programs. Breaking things legally is the best way 
+                        to learn how to build things securely.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                        <h3>Music & Focus</h3>
+                        <p>Lo-fi beats and classical compositions during deep work sessions. The right auditory environment 
+                        can extend flow state by hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo-link">
+                        <div class="footer-avatar-wrapper">
+                            <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="footer-avatar">
+                        </div>
+                        <div class="footer-logo-text"> 
+                            <span class="footer-logo">Chris James</span>
+                        </div>
+                    </a>
+                    <p>Elite software engineer with special interest in artificial & synthetic intelligence, data and hacking.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="academic.html">Academic Planner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:chrisjsmez@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/chrisjsm/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/russiantech" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://techa.salesnet.ng" target="_blank"><i class="fas fa-globe"></i> Techa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chris James. All rights reserved.</p>
+                <p>Miva Open University — BSc Computer Science</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

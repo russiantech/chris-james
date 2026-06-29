@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Academic Planner - manage tasks, track progress, and organize your academic life.">
+    <title>Academic Planner &bull; Christopher James</title>
+    <link rel="icon" href="assets/images/me/edidem.webp">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .welcome-icon, .aspiration-icon, .hobby-icon, .empty-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            background: linear-gradient(135deg, rgba(96,165,250,0.15), rgba(96,165,250,0.05));
+            border: 1px solid rgba(96,165,250,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: #60a5fa; margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .hobby-card:hover .hobby-icon, .empty-state:hover .empty-icon {
+            background: linear-gradient(135deg, rgba(96,165,250,0.25), rgba(96,165,250,0.1));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(96,165,250,0.15);
+        }
+        .section-tag {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.875rem; font-weight: 500; color: #60a5fa;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+        }
+        .section-tag i { font-size: 0.75rem; }
+        .page-tag {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.875rem; font-weight: 500; color: #60a5fa;
+            text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .page-tag i { font-size: 0.75rem; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.875rem 1.75rem; border-radius: 8px;
+            font-weight: 600; font-size: 0.9375rem;
+            text-decoration: none; transition: all 0.25s ease;
+            cursor: pointer; border: none;
+        }
+        .btn i {
+            font-size: 0.875rem; transition: transform 0.2s ease;
+        }
+        .btn:hover i { transform: translateX(3px); }
+        .btn-primary {
+            background: #60a5fa; color: #0a0a0f;
+        }
+        .btn-primary:hover {
+            background: #3b82f6; transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(96,165,250,0.25);
+        }
+        .btn-full { width: 100%; justify-content: center; }
+        .footer-links a {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: rgba(255,255,255,0.6); text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover { color: #60a5fa; }
+        .footer-links a i { font-size: 0.875rem; width: 1.25rem; text-align: center; }
+        .filter-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 1rem; border-radius: 6px;
+            font-weight: 500; font-size: 0.875rem;
+            background: transparent; color: rgba(255,255,255,0.6);
+            border: 1px solid rgba(255,255,255,0.15);
+            cursor: pointer; transition: all 0.2s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(96,165,250,0.12); color: #60a5fa;
+            border-color: rgba(96,165,250,0.3);
+        }
+        .stat-card {
+            text-align: center; padding: 1.5rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .stat-number {
+            font-size: 2rem; font-weight: 800; color: #60a5fa;
+            line-height: 1; display: block;
+        }
+        .stat-label {
+            font-size: 0.875rem; color: rgba(255,255,255,0.6);
+            margin-top: 0.5rem; display: block;
+        }
+        .course-progress span {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            font-size: 0.875rem; color: rgba(255,255,255,0.6);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="nav-avatar">
+                <span class="nav-logo">Chris <span style="color: #60a5fa;">James</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="academic.html" class="nav-link active">School Planner</a></li>
+                <li><a href="contact.html" class="nav-link">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="page-tag"><i class="fas fa-tasks"></i> Productivity</span>
+                <h1 class="page-title">Academic Planner</h1>
+                <p class="page-desc">Interactive task management system. Add, complete, and delete your academic tasks in real-time.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="planner-layout">
+                    <!-- Task Input -->
+                    <div class="planner-input-card">
+                        <h2>Add New Task</h2>
+                        <form id="taskForm" class="task-form">
+                            <div class="form-group">
+                                <label for="taskTitle">Task Title</label>
+                                <input type="text" id="taskTitle" placeholder="e.g., Complete COS 106 Lab Assignment" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskCategory">Category</label>
+                                <select id="taskCategory">
+                                    <option value="assignment">Assignment</option>
+                                    <option value="exam">Exam Preparation</option>
+                                    <option value="project">Project Work</option>
+                                    <option value="reading">Reading & Research</option>
+                                    <option value="certification">Certification</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskPriority">Priority</label>
+                                <select id="taskPriority">
+                                    <option value="high">High</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="taskDue">Due Date</label>
+                                <input type="date" id="taskDue" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-plus"></i> Add Task</button>
+                        </form>
+                    </div>
+
+                    <!-- Task Stats -->
+                    <div class="planner-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" id="totalTasks">0</span>
+                            <span class="stat-label">Total Tasks</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="pendingTasks">0</span>
+                            <span class="stat-label">Pending</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="completedTasks">0</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" id="completionRate">0%</span>
+                            <span class="stat-label">Completion Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="planner-filters">
+                    <button class="filter-btn active" data-filter="all"><i class="fas fa-list"></i> All Tasks</button>
+                    <button class="filter-btn" data-filter="pending"><i class="fas fa-clock"></i> Pending</button>
+                    <button class="filter-btn" data-filter="completed"><i class="fas fa-check"></i> Completed</button>
+                    <button class="filter-btn" data-filter="high"><i class="fas fa-exclamation-circle"></i> High Priority</button>
+                </div>
+
+                <!-- Task List -->
+                <div class="task-list-container">
+                    <div id="taskList" class="task-list">
+                        <!-- Tasks rendered by JavaScript -->
+                    </div>
+                    <div id="emptyState" class="empty-state">
+                        <div class="empty-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>No tasks yet</h3>
+                        <p>Add your first academic task above to get started.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Data Section -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-university"></i> Current Semester</span>
+                    <h2 class="section-title">100L — 2nd Semester Overview</h2>
+                </div>
+                <div class="semester-grid">
+                    <div class="course-card">
+                        <div class="course-code">COS 106</div>
+                        <h3>Introduction to Web Technologies</h3>
+                        <p>HTML, CSS, JavaScript, responsive design, and fullstack fundamentals.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span>75% Complete</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">COS 111</div>
+                        <h3>Technical Certification in Computing I</h3>
+                        <p>Micro-credential program: AWS Technical Essentials, ML Engineer, Generative AI.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span>100% Complete</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">MAT 102</div>
+                        <h3>Calculus & Linear Algebra</h3>
+                        <p>Differential equations, matrix operations, and vector spaces.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span>60% Complete</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">PHY 102</div>
+                        <h3>Physics for Computing</h3>
+                        <p>Electromagnetism, circuits, and digital logic fundamentals.</p>
+                        <div class="course-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <span>45% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo-link">
+                        <div class="footer-avatar-wrapper">
+                            <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="footer-avatar">
+                        </div>
+                        <div class="footer-logo-text"> 
+                            <span class="footer-logo">Chris James</span>
+                        </div>
+                    </a>
+                    <p>Elite software engineer with special interest in artificial & synthetic intelligence, data and hacking.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="academic.html">Academic Planner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:chrisjsmez@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/chrisjsm/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/russiantech" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="https://techa.salesnet.ng" target="_blank"><i class="fas fa-globe"></i> Techa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chris James. All rights reserved.</p>
+                <p>Miva Open University — BSc Computer Science</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/planner.js"></script>
+</body>
+</html>

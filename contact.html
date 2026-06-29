@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Christopher James - get in touch for collaborations, projects, or academic inquiries.">
+    <title>Contact | Christopher James</title>
+    <link rel="icon" href="assets/images/me/edidem.webp">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="nav-avatar">
+                <span class="nav-logo">Chris <span style="color: #60a5fa;">James</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="academic.html" class="nav-link">School Planner</a></li>
+                <li><a href="contact.html" class="nav-link active">Get In Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="page-tag">Let's Connect</span>
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-desc">Open for collaborations, employment & research opportunities, internships, and academic discussions.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:chrisjsmez@gmail.com">chrisjsmez@gmail.com</a></p>
+                            <p class="info-note">Primary contact for professional inquiries</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+2347026561327">(234) 702-656-1327</a></p>
+                            <p class="info-note">Available during business hours (WAT)</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                            <h3>Location</h3>
+                            <p>Graceland Estate, Lekki, Lagos, Nigeria</p>
+                            <p class="info-note">Open to remote opportunities globally</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>University</h3>
+                            <p>Miva Open University</p>
+                            <p class="info-note">BSc Computer Science (In Progress)</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contactName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+                                <span class="error-message" id="nameError">Name is required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address <span class="required">*</span></label>
+                                <input type="email" id="contactEmail" name="email" placeholder="your.email@example.com" required>
+                                <span class="error-message" id="emailError">Please enter a valid email address</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="contactPhone" name="phone" placeholder="e.g., 2347026561327" required>
+                                <span class="error-message" id="phoneError">Phone number must contain only digits</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <select id="contactSubject" name="subject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="collaboration">Project Collaboration</option>
+                                    <option value="internship">Internship Opportunity</option>
+                                    <option value="academic">Academic Discussion</option>
+                                    <option value="hiring">Hiring / Recruitment</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message <span class="required">*</span></label>
+                                <textarea id="contactMessage" name="message" rows="5" placeholder="Describe your inquiry, project, or opportunity..." required></textarea>
+                                <span class="error-message" id="messageError">Message cannot be empty</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                        <div id="formSuccess" class="form-success">
+                            <div class="success-icon"><i class="fas fa-check"></i></div>
+                            <h3>Message Sent Successfully</h3>
+                            <p>Thank you for reaching out. I will respond within 24-48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Links -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Online</span>
+                    <h2 class="section-title">Find Me Online</h2>
+                </div>
+                <div class="social-grid">
+                    <a href="https://techa.salesnet.ng" target="_blank" class="social-card">
+                        <div class="social-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Techa</h3>
+                        <p>Personal portfolio and SaaS launchpad</p>
+                    </a>
+                    <a href="https://intellect.salesnet.ng/instructors/chrisjsm" target="_blank" class="social-card">
+                        <div class="social-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Intellect</h3>
+                        <p>Digital learning platform and instructor profile</p>
+                    </a>
+                    <a href="https://salesnet.ng" target="_blank" class="social-card">
+                        <div class="social-icon"><i class="fas fa-cart-shopping"></i></div>
+                        <h3>Salesnet</h3>
+                        <p>AI-powered marketplace for Lagos commerce</p>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-card">
+                        <div class="social-icon"><i class="fab fa-linkedin"></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional network and career updates</p>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="social-card">
+                        <div class="social-icon"><i class="fab fa-github"></i></div>
+                        <h3>GitHub</h3>
+                        <p>Open source contributions and code repositories</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo-link">
+                        <div class="footer-avatar-wrapper">
+                            <img src="assets/images/avatar-nav.jpg" alt="Christopher James" class="footer-avatar">
+                        </div>
+                        <div class="footer-logo-text"> 
+                            <span class="footer-logo">Chris James</span>
+                        </div>
+                    </a>
+                    <p>Elite software engineer with special interest in artificial & synthetic intelligence, data and hacking.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="academic.html">Academic Planner</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:chrisjsmez@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/chrisjsm/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/russiantech" target="_blank">GitHub</a></li>
+                        <li><a href="https://techa.salesnet.ng" target="_blank">Techa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chris James. All rights reserved.</p>
+                <p>Miva Open University — BSc Computer Science</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>

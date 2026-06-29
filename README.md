@@ -8,8 +8,8 @@
 
 ## Live Demo & Repository
 
-- **Production Portfolio:** [https://techa.salesnet.ng](https://techa.salesnet.ng)
-- **GitHub Repository:** [github.com/chrisjsm/cos106-portfolio](https://github.com) *(to be created)*
+- **Production Portfolio:** [Techa](https://techa.salesnet.ng)
+- **GitHub Repository:** [Chris James](github.com/russiantech/chris-james) 
 - **Hosted Version:** [cos106-portfolio.netlify.app](https://netlify.app) *(to be deployed)*
 
 ---
@@ -41,7 +41,7 @@ A fully responsive, multi-page academic portfolio and student management website
 
 ## Technical Implementation
 
-### HTML Requirements ✅
+### HTML Requirements 
 - [x] Semantic HTML5 elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<aside>`)
 - [x] Forms with proper labels, `for` attributes, and accessibility
 - [x] Tables (task metadata display with structured data)
@@ -50,7 +50,7 @@ A fully responsive, multi-page academic portfolio and student management website
 - [x] Lists (unordered navigation, ordered features, definition-style metadata)
 - [x] Multimedia structure ready (video/audio semantic containers)
 
-### CSS Requirements ✅
+### CSS Requirements 
 - [x] **External CSS stylesheet** (`assets/css/style.css` — 35,026 characters, single file)
 - [x] **Responsive design** with mobile-first media queries (breakpoints: 480px, 768px)
 - [x] **CSS Grid** (projects grid, welcome grid, semester grid, stats grid, aspirations grid)
@@ -60,7 +60,7 @@ A fully responsive, multi-page academic portfolio and student management website
 - [x] **Consistent color scheme** via CSS custom properties (`:root` variables for full design system)
 - [x] **Mobile-friendly interface** tested down to 320px viewport width
 
-### JavaScript Requirements ✅
+### JavaScript Requirements 
 - [x] **Event handling** (`click`, `submit`, `blur`, `input`, `scroll`, `DOMContentLoaded`)
 - [x] **DOM manipulation** (dynamic task rendering, form state changes, class toggling, element creation)
 - [x] **Form validation** (empty field detection, email regex validation, phone digit-only validation)
@@ -173,12 +173,12 @@ Then navigate to `http://localhost:8000`
 
 | Browser | Minimum Version | Status |
 |---------|----------------|--------|
-| Google Chrome | 90+ | ✅ Fully supported |
-| Mozilla Firefox | 88+ | ✅ Fully supported |
-| Apple Safari | 14+ | ✅ Fully supported |
-| Microsoft Edge | 90+ | ✅ Fully supported |
-| Mobile Safari (iOS) | 14+ | ✅ Fully supported |
-| Chrome Mobile (Android) | 10+ | ✅ Fully supported |
+| Google Chrome | 90+ |  Fully supported |
+| Mozilla Firefox | 88+ |  Fully supported |
+| Apple Safari | 14+ |  Fully supported |
+| Microsoft Edge | 90+ |  Fully supported |
+| Mobile Safari (iOS) | 14+ |  Fully supported |
+| Chrome Mobile (Android) | 10+ |  Fully supported |
 
 ---
 
@@ -217,18 +217,16 @@ All project descriptions, career aspirations, and personal information are authe
 ## Author
 
 **Christopher James**  
-📧 Academic: c.james5474@miva.edu.ng  
-📧 Professional: chrisjsmez@gmail.com  
-📱 (234) 702-656-1327  
-🌐 [techa.salesnet.ng](https://techa.salesnet.ng)  
-💼 [LinkedIn](https://linkedin.com) | 💻 [GitHub](https://github.com)
+    Academic: c.james5474@miva.edu.ng  
+    Professional: chrisjsmez@gmail.com  
+    (234) 702-656-1327  
+    [techa.salesnet.ng](https://techa.salesnet.ng)  
+    [LinkedIn](https://linkedin.com) | 💻 [GitHub](https://github.com)
 
 **Miva Open University**  
 BSc Computer Science — 100L, 2nd Semester (In Progress)  
-Eti-Osa, Lagos, Nigeria
+Gracelnd Estate, Ajah, Lagos, Nigeria
 
 ---
 
 *Built with precision. Architected for scale. Secured by design.*
-#   c h r i s - j a m e s  
- 
